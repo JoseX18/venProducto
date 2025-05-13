@@ -10,9 +10,23 @@
 </head>
 
 <body>
+    <!-- Menu principal -->
     <header>
         <nav>
-            <div class="logo">VenProductos</div>
+            <!-- <div class="logo">VenProductos</div> -->
+            <!-- Logo -->
+            <div class="card">
+                <div class="border"></div>
+                <div class="content">
+                    <div class="logo">
+
+                        <p id="logoNameP">Inter Design</p>
+                        <span class="trail"></span>
+                    </div>
+                    <!-- <span class="logo-bottom-text">Design Inter</span> -->
+                </div>
+                <span class="bottom-text">Diseño Interiores</span>
+            </div>
             <ul>
                 <li><a href="../../index.html">Inicio</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
@@ -27,21 +41,23 @@
             </div>
         </nav>
     </header>
-    <main class="loginMain">
-        <section class="loginContainer">
-            <h2>Iniciar Sesion</h2>
-            <form action="" id="loginForm">
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required>
-
-                <label for="pass">Contrasena:</label>
-                <input type="password" id="pass" name="pass" required>
-
-                <button type="submit">Ingresar</button>
-            </form>
-
-            <p id="mensajeLogin"></p>
-        </section>
+    <main class="form-container">
+        <p class="title">Iniciar Sesión</p>
+        <form class="form" id="loginForm">
+            <div class="input-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario" id="usuario" placeholder="">
+            </div>
+            <div class="input-group">
+                <label for="pass">Contraseña</label>
+                <input type="password" name="pass" id="pass" placeholder="">
+                <div class="forgot">
+                    <a rel="noopener noreferrer" href="#">Olvidar contraseña ?</a>
+                </div>
+            </div>
+            <button class="sign">Iniciar Sesión</button>
+        </form>
+        <p id="mensajeLogin"></p>
     </main>
     <footer>
         <p>2025 - Todos los derechos reservados</p>

@@ -7,7 +7,7 @@
 /* Estilos para ocupar siempre todo el alto de la pantalla */
 html,
 body {
-    height: 100%;
+    /* height: 100%; */
     min-height: 100svh;
 }
 
@@ -16,18 +16,14 @@ body {
     flex-direction: column;
     line-height: 1.6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-main {
-    flex: 1;
-    /* Hace que el main ocupe todo el espacio disponible entre el header y footer */
+    justify-content: space-between;
 }
 
 header {
-    background-color: rgb(33, 75, 201);
+    background-color: rgba(17, 24, 39, 1);
     color: white;
     padding: 20px;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
 }
@@ -72,10 +68,180 @@ nav ul li a:hover {
     margin: 4px;
 }
 
+/* Logo */
+.card {
+    width: 140px;
+    height: 80px;
+    background: rgba(17, 24, 39, 1);
+    position: relative;
+    display: grid;
+    place-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+}
+
+#logo-main,
+#logo-second {
+    height: 100%;
+}
+
+#logoNameP {
+    font-size: 16px;
+    padding: 3px;
+}
+
+#logo-main {
+    fill: #bd9f67;
+}
+
+#logo-second {
+    padding-bottom: 5px;
+    fill: none;
+    stroke: #bd9f67;
+    stroke-width: 1px;
+}
+
+.border {
+    position: absolute;
+    inset: 0px;
+    border: 2px solid #bd9f67;
+    opacity: 0;
+    transform: rotate(10deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.bottom-text {
+    position: absolute;
+    left: 50%;
+    bottom: 4px;
+    transform: translateX(-50%);
+    font-size: 6px;
+    text-transform: uppercase;
+    padding: 0px 5px 0px 8px;
+    color: #bd9f67;
+    background: #243137;
+    opacity: 0;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.content {
+    transition: all 0.5s ease-in-out;
+}
+
+.content .logo {
+    height: 25px;
+    position: relative;
+    width: 45px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.content .logo .logo1 {
+    height: 33px;
+    position: absolute;
+    left: 0;
+}
+
+.content .logo .trail {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.content .logo-bottom-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    color: #bd9f67;
+    padding-left: 8px;
+    font-size: 11px;
+    opacity: 0;
+    letter-spacing: none;
+    transition: all 0.5s ease-in-out 0.5s;
+}
+
+.card:hover {
+    border-radius: 0;
+    transform: scale(1.1);
+}
+
+.card:hover .logo {
+    width: 140px;
+    animation: opacity 1s ease-in-out;
+}
+
+.card:hover .border {
+    inset: 10px;
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.card:hover .bottom-text {
+    letter-spacing: 3px;
+    opacity: 1;
+    transform: translateX(-50%);
+}
+
+.card:hover .content .logo-bottom-text {
+    opacity: 1;
+    letter-spacing: 9.5px;
+}
+
+.card:hover .trail {
+    animation: trail 1s ease-in-out;
+}
+
+@keyframes opacity {
+    0% {
+        border-right: 1px solid transparent;
+    }
+
+    10% {
+        border-right: 1px solid #bd9f67;
+    }
+
+    80% {
+        border-right: 1px solid #bd9f67;
+    }
+
+    100% {
+        border-right: 1px solid transparent;
+    }
+}
+
+@keyframes trail {
+    0% {
+        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+        opacity: 0;
+    }
+
+    30% {
+        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+        opacity: 1;
+    }
+
+    70% {
+        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+        opacity: 1;
+    }
+
+    95% {
+        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+        opacity: 0;
+    }
+}
+
 /* Estilos para el main */
 main {
     max-width: 1100px;
-    margin: 80px auto 0;
+    margin: auto;
     padding: 20px;
     animation: entrada 1s;
 }
@@ -87,11 +253,13 @@ section {
 }
 
 footer {
-    background-color: rgb(33, 75, 201);
+    background-color: rgba(17, 24, 39, 1);
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 5px;
+    /* position: absolute;
+    bottom: 0; */
 }
 
 @keyframes entrada {
