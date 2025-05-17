@@ -34,11 +34,12 @@
                 <li><a href="login.html">Iniciar Sesión</a></li>
             </ul>
             <!-- Con el div y los span crearemos un icono de tipo hamburguesa -->
-            <div class="hamburguesa">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <input id="checkbox" type="checkbox">
+            <label class="toggle" for="checkbox">
+                <div id="bar1" class="bars"></div>
+                <div id="bar2" class="bars"></div>
+                <div id="bar3" class="bars"></div>
+            </label>
         </nav>
     </header>
     <main class="form-container">
@@ -51,9 +52,6 @@
             <div class="input-group">
                 <label for="pass">Contraseña</label>
                 <input type="password" name="pass" id="pass" placeholder="">
-                <div class="forgot">
-                    <a rel="noopener noreferrer" href="#">Olvidar contraseña ?</a>
-                </div>
             </div>
             <button class="sign">Iniciar Sesión</button>
         </form>

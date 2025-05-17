@@ -1,4 +1,4 @@
-const hamburguesa = document.querySelector(".hamburguesa");
+const hamburguesa = document.querySelector(".toggle");
 const navMenu = document.querySelector("nav ul");
 
 hamburguesa.addEventListener("click", () => {
