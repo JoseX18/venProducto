@@ -240,107 +240,6 @@ nav ul li a:hover {
     transition-duration: .3s;
     transform-origin:right;
   } */
-
-
-/* abanico */
-/* From Uiverse.io by joe-watson-sbf */
-.abanico {
-    width: 210px;
-    height: 254px;
-    border-radius: 4px;
-    background: #212121;
-    display: flex;
-    gap: 5px;
-    padding: .4em;
-}
-
-.abanico p {
-    height: 100%;
-    flex: 1;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .5s;
-    background: #212121;
-    border: 1px solid #ff5a91;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.abanico p:hover {
-    flex: 4;
-}
-
-.abanico p span {
-    min-width: 14em;
-    padding: .5em;
-    text-align: center;
-    transform: rotate(-90deg);
-    transition: all .5s;
-    text-transform: uppercase;
-    color: #ff568e;
-    letter-spacing: .1em;
-}
-
-.abanico p:hover span {
-    transform: rotate(0);
-}
-
-.abanico-img {
-    display: none;
-}
-
-.abanico-img:hover {
-    display: flex;
-}
-
-@keyframes opacity {
-    0% {
-        border-right: 1px solid transparent;
-    }
-
-    10% {
-        border-right: 1px solid #bd9f67;
-    }
-
-    80% {
-        border-right: 1px solid #bd9f67;
-    }
-
-    100% {
-        border-right: 1px solid transparent;
-    }
-}
-
-main section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@keyframes trail {
-    0% {
-        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
-        opacity: 0;
-    }
-
-    30% {
-        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
-        opacity: 1;
-    }
-
-    70% {
-        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
-        opacity: 1;
-    }
-
-    95% {
-        background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
-        opacity: 0;
-    }
-}
-
 /* Estilos para el main */
 main {
     max-width: 1100px;
@@ -350,7 +249,7 @@ main {
 }
 
 section {
-    background-color: antiquewhite;
+    background-color: rgba(17, 24, 39, 0.177);
     padding: 20px;
     border-radius: 10px;
 }
@@ -402,4 +301,28 @@ footer {
     nav .logo {
         font-size: 6vw;
     }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-intro {
+    width: 90%;
+    margin-top: 20px;
+}
+
+#carrito {
+    margin-top: 20px;
+}
+
+#carrito p {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.intro p {
+    margin-top: 10px;
 }
